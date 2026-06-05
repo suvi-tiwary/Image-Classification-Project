@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mask Detection Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Mask Detection System</p>
+        <h1>Check if a person is wearing a mask</h1>
+        <p class="hero-copy">Use your webcam to take a photo and get an instant mask status result.</p>
+      </div>
+    </header>
+
+    <main class="grid-panel">
+      <section class="card card-panel">
+        <h2>Live Webcam</h2>
+        <video id="webcam" autoplay playsinline></video>
+        <div class="button-row">
+          <button id="start-btn" class="button primary">Start Webcam</button>
+          <button id="capture-btn" class="button" disabled>Capture Photo</button>
+          <button id="analyze-btn" class="button" disabled>Check Mask</button>
+        </div>
+      </section>
+
+      <section class="card card-panel preview-panel">
+        <h2>Captured Image</h2>
+        <canvas id="photo-canvas" width="480" height="360"></canvas>
+        <div class="result-card">
+          <h3>Detection Result</h3>
+          <p id="status-text">Start your webcam, capture a photo, and check mask status.</p>
+        </div>
+      </section>
+    </main>
+
+    <section class="card info-card">
+      <h2>How to use</h2>
+      <ol>
+        <li>Allow camera access when prompted.</li>
+        <li>Click <strong>Capture Photo</strong> to freeze a frame from the webcam.</li>
+        <li>Click <strong>Check Mask</strong> to see if the system detects mask usage.</li>
+      </ol>
+      <p class="note">This demo uses a simple placeholder detection heuristic. For a production system, connect the captured image to a trained mask detection model or backend API.</p>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
