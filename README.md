@@ -1,4 +1,4 @@
-# Image Classification Streamlit App
+# Mak Detection system 
 
 This workspace contains a simple Streamlit web app for image classification.
 
